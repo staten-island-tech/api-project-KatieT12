@@ -1,5 +1,5 @@
 /* import {DOMSelectors} from "./DOM"; */
-const URL = `https://api.quotable.io/random`;
+const URL = `http://gateway.marvel.com:433/v1/public/comics?title=${comicName}&ts=1&apikey=407c85a54ac6c8685c6fb3876a2437e9b789cbf9&hash=ded5d96a44705aa9c63da8d151ad4365`;
 
 async function getData(URL){
     try {
