@@ -10,8 +10,9 @@ async function getData(URL){
         }
         //convert response to JSON
         const data = await response.json();
-        document.querySelector("h1").textContent = data.content; 
-     /*    data.forEach(el => 
+        console.log(data);
+        /* document.querySelector("h1").textContent = data.content; 
+        data.forEach(el => 
             DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
@@ -20,7 +21,7 @@ async function getData(URL){
                 <h4 class="misc">${el.misc}</h4>
                 <h5 class="misc">${el.misc}</h5>
             </div>`
-            )); */
+            ));  */
     } catch (error) {
        console.log(error, "Uh oh"); 
        document.querySelector("h1").textContent = "woops";
