@@ -12,9 +12,10 @@ async function getData(URL){
         //convert response to JSON
         const data = response.json();
         console.log(data); 
-        /* document.querySelector("h1").textContent = data.content; 
+        /*document.querySelector("h1").textContent = data.title; */
         data.forEach(el => 
-            DOMSelectors.container.insertAdjacentHTML(
+            document.querySelector("h1").textContent = el.title);
+            /* DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
                 <h3 class="title">${el.title}</h3>
@@ -22,10 +23,10 @@ async function getData(URL){
                 <h4 class="misc">${el.release_date}</h4>
                 <h5 class="misc">${el.running_time}</h5>
             </div>`
-            ));  */
+            ) */  
     } catch (error) {
        console.log(error, "Uh oh"); 
        document.querySelector("h1").textContent = "woops";
     }
 }
-getData(URL);
+getData(URL); 
