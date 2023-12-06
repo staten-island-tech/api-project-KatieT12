@@ -20,7 +20,7 @@ async function getData(URL){
                 "beforeend",
                 `<div class = "card">
                 <h3 class="title">${el.title}</h3>
-                <img src=${el.img} alt="image"> </img>
+                <img src=${el.image} alt="image"> </img>
                 <h4 class="misc">${el.release_date}</h4>
                 <h5 class="misc">${el.running_time}</h5>
             </div>`
