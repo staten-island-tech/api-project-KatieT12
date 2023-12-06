@@ -1,3 +1,11 @@
+html,
+body,
+*{
+  margin: 0;
+  padding: 10;
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
 /*carddetails*/
 .card{
   height: 38vh;
@@ -17,3 +25,12 @@ img{
 .misc{
   font-size: var(--h4);
 }
+.container{
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5rem auto;
+  padding: 5px;
+  flex-direction: row;
+  }
