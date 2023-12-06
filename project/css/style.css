@@ -6,6 +6,82 @@ body,
   box-sizing: border-box;
   font-size: 62.5%; 
 }
+:root{
+  /*darkmode palette*/
+  --purple3:#3a305b;
+  --purple1:#d5cae9;
+  --purple2:#916bd1;
+  --purple4:#180a2d;
+  /*lightmode palette*/
+  --ivory:#e2e5dd;
+  --brown: #38342f;
+  --olive: #5a633e;
+  --yellow: #f9c080;
+
+  /* Intentions 
+  can use primary-textColor: to define main text color of the theme*/
+--primary: var(--ivory);
+--secondary: var(--olive);
+
+  /*Typography*/
+  --h1: 7.594rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+.light{
+  --primary: var(--ivory);
+  --secondary: var(--olive);
+  color:var(--brown);
+}
+.dark{
+  --primary: var(--purple4);
+  --secondary: var(--purple3);
+  color:var(--purple1);
+}
+.title{
+  background-color: var(--primary);
+  text-align: center;
+  margin-top: 5rem;
+}
+.main{
+  background-color: var(--secondary);
+}
+h1{
+  font-size: var(--h1);
+}
+h2{
+  font-size: var(--h2);
+}
+h3{
+  font-size: var(--h3);
+}
+h4{
+  font-size: var(--h4);
+}
+h5{
+  font-size: var(--h5);
+}
+h1, h2, h3, h4, h5{
+  text-align: center;
+}
+#changetheme, /* #underten, #instockbooks, */ #main, #button, #changetheme:link, /* 
+#underten:link, #instockbooks:link, */ #main:link, #button:link, #changetheme:visited,/* 
+#underten:visited, #instockbooks:visited, */ #main:visited, #button:visited{
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  margin: 1rem auto;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.2s;
+}
+#changetheme:hover,  /* #underten:hover, #instockbooks:hover,  */#main:hover, #button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
+}
 /*carddetails*/
 .card{
   height: 38vh;
