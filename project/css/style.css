@@ -66,6 +66,12 @@ h5{
 h1, h2, h3, h4, h5{
   text-align: center;
 }
+.form {
+  font-size: 3vh;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(53, 11, 3);
+}
 #changetheme, /* #underten, #instockbooks, */ #main, #button, #changetheme:link, /* 
 #underten:link, #instockbooks:link, */ #main:link, #button:link, #changetheme:visited,/* 
 #underten:visited, #instockbooks:visited, */ #main:visited, #button:visited{
