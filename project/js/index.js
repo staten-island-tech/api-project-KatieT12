@@ -35,6 +35,35 @@ async function getData(URL){
                 document.body.classList.remove("dark");
             }
         });
+        
+function clearFields(){
+    inputTitle.value = "";
+};
+
+function addCard(){
+    DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class = "card">
+        <h3 class="title">${el.title}</h3>
+        <img src=${el.image} alt="image"> </img>
+        <h4 class="misc">${el.release_date}</h4>
+        <h5 class="misc">${el.running_time}</h5>
+    </div>`
+    )};
+
+DOMSelectors.form.addEventListener("submit", function(event){
+        event.preventDefault(); 
+        data.filter((el) => el.title === "inputTitle.value").forEach(el => addCard());
+     clearFields();
+}); 
+
+
+
+
+
+
+
+
     } catch (error) {
        console.log(error, "Uh oh"); 
        document.querySelector("title").textContent = "woops";
