@@ -35,8 +35,11 @@ async function getData(URL){
                 document.body.classList.remove("dark");
             }
         });
+        function clearHTML(){
+            DOMSelectors.container.innerHTML = "";
+        };
         
-function clearFields(){
+function clearSearchFields(){
     inputTitle.value = "";
 };
 
@@ -52,9 +55,10 @@ function addCard(){
     )};
 
 DOMSelectors.form.addEventListener("submit", function(event){
-        event.preventDefault(); 
-        data.filter((el) => el.title === "inputTitle.value").forEach(el => addCard());
-     clearFields();
+    event.preventDefault(); 
+    clearHTML();
+    clearSearchFields();
+    data.filter((el) => el.title === "inputTitle.value").forEach(el => addCard());
 }); 
 
 

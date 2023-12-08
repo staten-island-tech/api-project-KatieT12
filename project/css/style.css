@@ -15,7 +15,7 @@ body,
   /*lightmode palette*/
   --ivory:#e2e5dd;
   --brown: #38342f;
-  --olive: #5a633e;
+  --image1: url(../img/samuel-berner-kcvEQb7GXZc-unsplash.jpg);
   --yellow: #f9c080;
 
   /* Intentions 
@@ -32,7 +32,7 @@ body,
 }
 .light{
   --primary: var(--ivory);
-  --secondary: var(--olive);
+  --secondary: var(--image1);
   color:var(--brown);
 }
 .dark{
@@ -70,11 +70,8 @@ h1, h2, h3, h4, h5{
   font-size: 3vh;
   color: rgb(255, 255, 255);
   text-align: center;
-  background-color: rgb(53, 11, 3);
 }
-#changetheme, /* #underten, #instockbooks, */ #main, #button, #changetheme:link, /* 
-#underten:link, #instockbooks:link, */ #main:link, #button:link, #changetheme:visited,/* 
-#underten:visited, #instockbooks:visited, */ #main:visited, #button:visited{
+#changetheme, #changetheme:link, #changetheme:visited{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -84,7 +81,7 @@ h1, h2, h3, h4, h5{
   border-radius: 10rem;
   transition: all 0.2s;
 }
-#changetheme:hover,  /* #underten:hover, #instockbooks:hover,  */#main:hover, #button:hover{
+#changetheme:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -103,6 +100,9 @@ background-color: var(--primary)
 img{
   width: 35%;
   margin-bottom: 5px;
+}
+.title{
+  margin-top: 1rem;
 }
 .misc{
   font-size: var(--h4);
