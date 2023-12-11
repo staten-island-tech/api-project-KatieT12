@@ -13,9 +13,8 @@ async function getData(URL){
         //convert response to JSON
         const data = await response.json();
         console.log(data); 
-        /*document.querySelector("h1").textContent = data.title; */
+
         data.forEach(el => 
-            /* document.querySelector("h1").textContent = el.title); */
              DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
@@ -35,30 +34,32 @@ async function getData(URL){
                 document.body.classList.remove("dark");
             }
         });
-        function clearHTML(){
-            DOMSelectors.container.innerHTML = "";
-        };
+        
+function clearHTML(){
+    DOMSelectors.container.innerHTML = "";
+};
         
 function clearSearchFields(){
     inputTitle.value = "";
 };
 
-function addCard(){
-    DOMSelectors.container.insertAdjacentHTML(
+function addCard(arr){
+    arr.forEach((x)=> DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
         `<div class = "card">
-        <h3 class="title">${el.title}</h3>
-        <img src=${el.image} alt="image"> </img>
-        <h4 class="misc">${el.release_date}</h4>
-        <h5 class="misc">${el.running_time}</h5>
+        <h3 class="title">${x.title}</h3>
+        <img src=${x.image} alt="image"> </img>
+        <h4 class="misc">${x.release_date}</h4>
+        <h5 class="misc">${x.running_time}</h5>
     </div>`
-    )};
+))};
 
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault(); 
     clearHTML();
     clearSearchFields();
-    data.filter((el) => el.title === "inputTitle.value").forEach(el => addCard());
+    let newArr = data.filter((el) => el.title === "inputTitle.value");
+    addCard(newArr);
 }); 
 
 

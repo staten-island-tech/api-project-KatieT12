@@ -8,15 +8,15 @@ body,
 }
 :root{
   /*darkmode palette*/
-  --purple3:#3a305b;
-  --purple1:#d5cae9;
-  --purple2:#916bd1;
-  --purple4:#180a2d;
+  --dark3:#030408;
+  --dark1:#d3b34f;
+  --dark2:#8d7128;
+  --dark4:#782205;
   /*lightmode palette*/
-  --ivory:#e2e5dd;
-  --brown: #38342f;
-  --image1: url(../img/samuel-berner-kcvEQb7GXZc-unsplash.jpg);
-  --yellow: #f9c080;
+  --light1:#123960;
+  --light2: #f1ed4f;
+  --light3: #e0e6f2;
+  --light4: #7e9b96;
 
   /* Intentions 
   can use primary-textColor: to define main text color of the theme*/
@@ -31,14 +31,14 @@ body,
   --h5: 1.5rem;
 }
 .light{
-  --primary: var(--ivory);
-  --secondary: var(--image1);
-  color:var(--brown);
+  --primary: var(--light4);
+  --secondary: var(--light1);
+  color:var(--light3);
 }
 .dark{
-  --primary: var(--purple4);
-  --secondary: var(--purple3);
-  color:var(--purple1);
+  --primary: var(--dark4);
+  --secondary: var(--dark3);
+  color: var(--dark1);
 }
 .title{
   background-color: var(--primary);
