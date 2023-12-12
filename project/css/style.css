@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5{
 }
 /*carddetails*/
 .card{
-  height: 38vh;
+  height: 25vh;
   width: 20vw;
 display: flex;
 flex-direction: column;
@@ -103,6 +103,7 @@ img{
 }
 .title{
   margin-top: 1rem;
+  font-size: var(--h4);
 }
 .misc{
   font-size: var(--h4);

@@ -1,7 +1,7 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://ghibliapi.vercel.app/films`;
+const URL = `https://holidays.abstractapi.com/v1/?api_key=d4309de73f0144c0be0473b2681e6d4b&country=US&year=2020`;
 
 async function getData(URL){
     try {
@@ -18,10 +18,9 @@ async function getData(URL){
              DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
-                <h3 class="title">${el.title}</h3>
-                <img src=${el.image} alt="image"> </img>
-                <h4 class="misc">${el.release_date}</h4>
-                <h5 class="misc">${el.running_time}</h5>
+                <h3 class="title">${el.name}</h3>
+                <h4 class="misc">${el.date}</h4>
+                <h5 class="misc">${el.type}</h5>
             </div>`
             ) 
         )
@@ -58,10 +57,19 @@ DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault(); 
     clearHTML();
     clearSearchFields();
-    let newArr = data.filter((el) => el.title === "inputTitle.value");
+    let newArr = data.filter((el) => el.name === "inputName.value");
     addCard(newArr);
 }); 
-
+function filtering(){
+    let buttons = document.querySelectorAll("#button")  
+   buttons.forEach((btn) => btn.addEventListener("click", function(){
+       clearFields();
+       let typeHoliday = btn.textContent.toLowerCase() 
+       let newArr = holidays.filter((holiday) => holiday.type.includes(typeHoliday));
+       insertCard(newArr)
+   })); 
+   };
+   filtering()
 
 
 
