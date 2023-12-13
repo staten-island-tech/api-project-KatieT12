@@ -67,11 +67,11 @@ h1, h2, h3, h4, h5{
   text-align: center;
 }
 .form {
-  font-size: 3vh;
+  font-size: 5vh;
   color: rgb(255, 255, 255);
   text-align: center;
 }
-#changetheme, #changetheme:link, #changetheme:visited{
+#changetheme, #button{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -80,14 +80,16 @@ h1, h2, h3, h4, h5{
   border: none;
   border-radius: 10rem;
   transition: all 0.2s;
+  color: var(--secondary);
+  background-color:var(--primary);
 }
-#changetheme:hover{
+#changetheme:hover, #button:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
 /*carddetails*/
 .card{
-  height: 25vh;
+  height: 38vh;
   width: 20vw;
 display: flex;
 flex-direction: column;
@@ -96,6 +98,10 @@ justify-content: space-around;
 border-radius: 10px;
 margin-bottom: 40px;
 background-color: var(--primary)
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
 img{
   width: 35%;

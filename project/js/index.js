@@ -1,7 +1,8 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://holidays.abstractapi.com/v1/?api_key=d4309de73f0144c0be0473b2681e6d4b&country=US&year=2020`;
+const URL = `https://hp-api.onrender.com/api/characters`;
+//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2
 
 async function getData(URL){
     try {
@@ -19,8 +20,9 @@ async function getData(URL){
                 "beforeend",
                 `<div class = "card">
                 <h3 class="title">${el.name}</h3>
-                <h4 class="misc">${el.date}</h4>
-                <h5 class="misc">${el.type}</h5>
+                <img class="cover" src="${el.image}" alt="image">
+                <h4 class="misc">${el.actor}</h4>
+                <h5 class="misc">${el.house}</h5>
             </div>`
             ) 
         )
@@ -39,7 +41,7 @@ function clearHTML(){
 };
         
 function clearSearchFields(){
-    inputTitle.value = "";
+    inputName.value = "";
 };
 
 function addCard(arr){
@@ -63,9 +65,9 @@ DOMSelectors.form.addEventListener("submit", function(event){
 function filtering(){
     let buttons = document.querySelectorAll("#button")  
    buttons.forEach((btn) => btn.addEventListener("click", function(){
-       clearFields();
+       clearHTML();
        let typeHoliday = btn.textContent.toLowerCase() 
-       let newArr = holidays.filter((holiday) => holiday.type.includes(typeHoliday));
+       let newArr = URL.filter((holiday) => holiday.type.includes(typeHoliday));
        insertCard(newArr)
    })); 
    };
