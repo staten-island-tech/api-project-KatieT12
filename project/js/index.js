@@ -1,7 +1,7 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://pokeapi.co/api/v2/pokemon?limit=150`;
+const URL = `https://valorant-api.com/v1/agents`;
 //https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2
 
 async function getData(URL){
@@ -19,7 +19,7 @@ async function getData(URL){
              DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
-                <h3 class="title">${el.name}</h3>
+                <h3 class="title">${el.displayName}</h3>
                 <img class="cover" src="${el.image}" alt="image">
                 <h4 class="misc">${el.actor}</h4>
                 <h5 class="misc">${el.house}</h5>
