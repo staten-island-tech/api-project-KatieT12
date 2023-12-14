@@ -13,10 +13,11 @@ body,
   --dark2:#8d7128;
   --dark4:#782205;
   /*lightmode palette*/
-  --light1:#123960;
-  --light2: #f1ed4f;
-  --light3: #e0e6f2;
-  --light4: #7e9b96;
+  --light1:#e4ebe6;
+  --light2: #d6edf9;
+  --light3: #0f5d9c;
+  --light4: #a83c3c;
+  --light5: #d3b34f;
 
   /* Intentions 
   can use primary-textColor: to define main text color of the theme*/
@@ -32,18 +33,20 @@ body,
 }
 .light{
   --primary: var(--light4);
-  --secondary: var(--light1);
-  color:var(--light3);
+  --secondary: var(--light2);
+  --third:var(--light3);
+  --fourth: var(--light5);
 }
 .dark{
   --primary: var(--dark4);
   --secondary: var(--dark3);
-  color: var(--dark1);
+  --third: var(--dark1);
 }
 .title{
-  background-color: var(--primary);
+  background-color: var(--third);
   text-align: center;
   margin-top: 5rem;
+  color: var(--fourth);
 }
 .main{
   background-color: var(--secondary);
@@ -68,8 +71,12 @@ h1, h2, h3, h4, h5{
 }
 .form {
   font-size: 5vh;
-  color: rgb(255, 255, 255);
+  color: var(--third);
   text-align: center;
+  margin-bottom: 5rem;
+}
+#buttons{
+  align-items: center;
 }
 #changetheme, #button{
   text-decoration: none;
@@ -82,6 +89,7 @@ h1, h2, h3, h4, h5{
   transition: all 0.2s;
   color: var(--secondary);
   background-color:var(--primary);
+  height: 10vh ;
 }
 #changetheme:hover, #button:hover{
   transform: translateY(-2px);
@@ -89,13 +97,15 @@ h1, h2, h3, h4, h5{
 }
 /*carddetails*/
 .card{
-  height: 38vh;
+  height: 50vh;
   width: 20vw;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
-border-radius: 10px;
+border-radius: 20px;
+border-color: var(--fourth);
+border-style:outset;
 margin-bottom: 40px;
 background-color: var(--primary)
 }
@@ -107,12 +117,14 @@ img{
   width: 35%;
   margin-bottom: 5px;
 }
-.title{
+.cardtitle{
   margin-top: 1rem;
   font-size: var(--h4);
+  color: var(--light1);
 }
 .misc{
   font-size: var(--h4);
+  color: var(--light5);
 }
 .container{
   display: flex;
