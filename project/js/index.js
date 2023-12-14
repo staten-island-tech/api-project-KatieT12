@@ -1,7 +1,7 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://pokemon-go-api.github.io/pokemon-go-api/api/pokedex.json`;
+const URL = `https://gateway.marvel.com/v1/public/comics?ts=16818029&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2`;
 //https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2
 
 async function getData(URL){
@@ -15,12 +15,13 @@ async function getData(URL){
         const data = await response.json();
         console.log(data); 
 
-        data.forEach(el => 
+        data.results.forEach(el => 
              DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
-                <h3 class="cardtitle">${el.id}</h3>
-                <h4 class="misc">Primary Type: ${el.primaryType.names.English}</h4>
+                <h3 class="cardtitle">${el.name}</h3>
+                <img class="cover" src="${front_default}" alt="image">
+                <h4 class="misc">Primary Type: ${el.types.type.name}</h4>
                 <h5 class="misc">Secondary Type: ${el.primaryType.names.English}</h5>
             </div>`
             ) 
