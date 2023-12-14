@@ -1,7 +1,7 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://gateway.marvel.com/v1/public/comics?ts=16818029&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2`;
+const URL = `https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2`;
 //https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2
 
 async function getData(URL){
