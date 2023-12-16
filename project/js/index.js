@@ -2,7 +2,7 @@ import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
 const URL = `https://fortnite-api.com/v2/cosmetics/br`;
-//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=4486abec9feb734885049f2117764b2b;
+//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=4486abec9feb734885049f2117764b2b; marvel alt just in case 
 
 async function getData(URL){
     try {
@@ -21,7 +21,7 @@ async function getData(URL){
                 `<div class = "card">
                 <h3 class="cardtitle">${obj.name}</h3>
                 <img class="cover" src="${obj.images.icon}" alt="image">
-                <h4 class="misc">${obj.rarity.displayValue}</h4>
+                <h4 class="rarity">${obj.rarity.displayValue}</h4>
                 <h5 class="misc">${obj.description}</h5>
             </div>`
             ) 
@@ -61,6 +61,21 @@ DOMSelectors.form.addEventListener("submit", function(event){
     let newArr = data.filter((el) => el.name === "inputName.value");
     addCard(newArr);
 }); 
+
+/* function expansion(){ expanding card when clicking on it TBD
+    let cards = document.querySelectorAll(".card")  
+   cards.forEach((card) => card.addEventListener("click", function(){
+       clearHTML();
+       arr.forEach((x)=> DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `
+        <h3 class="title">${x.id}</h3>
+        <h4 class="misc">Primary Type: ${el.primaryType.names.English}</h4>
+        <h5 class="misc">Secondary Type: ${el.primaryType.names.English}</h5>`
+))}))}; 
+
+   expansion()*/
+
 function filtering(){
     let buttons = document.querySelectorAll("#button")  
    buttons.forEach((btn) => btn.addEventListener("click", function(){

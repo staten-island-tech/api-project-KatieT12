@@ -8,15 +8,15 @@ body,
 }
 :root{
   /*darkmode palette*/
-  --dark3:#030408;
-  --dark1:#d3b34f;
+  --dark3: #2f3136;
+  --dark1:#1ccd4f;
   --dark2:#8d7128;
-  --dark4:#782205;
+  --dark4:#40444b;
   /*lightmode palette*/
-  --light1:#e4ebe6;
-  --light2: #d6edf9;
-  --light3: #0f5d9c;
-  --light4: #a83c3c;
+  --light1:#e4e5f1;
+  --light2: #fafafa;
+  --light3: #484b6a;
+  --light4: #e4e5f1;
   --light5: #d3b34f;
 
   /* Intentions 
@@ -90,6 +90,7 @@ h1, h2, h3, h4, h5{
   color: var(--secondary);
   background-color:var(--primary);
   height: 10vh ;
+  color: var(--third);
 }
 #changetheme:hover, #button:hover{
   transform: translateY(-2px);
@@ -98,7 +99,7 @@ h1, h2, h3, h4, h5{
 /*carddetails*/
 .card{
   height: 50vh;
-  width: 20vw;
+  width: 25vw;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -115,16 +116,22 @@ background-color: var(--primary)
 }
 img{
   width: 35%;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .cardtitle{
   margin-top: 1rem;
   font-size: var(--h4);
-  color: var(--light1);
+  color: var(--third);
 }
 .misc{
   font-size: var(--h4);
-  color: var(--light5);
+  color: var(--third);
+  margin-bottom: 2px;
+}
+.rarity{
+  font-size: var(--h4);
+  color: var(--third);
+  margin-bottom: 2px;
 }
 .container{
   display: flex;
