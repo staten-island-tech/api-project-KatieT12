@@ -1,8 +1,8 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=4486abec9feb734885049f2117764b2b`;
-//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=a49c63b1d849e5be3f6690dacaf948f2
+const URL = `https://fortnite-api.com/v2/cosmetics/br`;
+//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=4486abec9feb734885049f2117764b2b;
 
 async function getData(URL){
     try {
@@ -15,14 +15,14 @@ async function getData(URL){
         const data = await response.json();
         console.log(data); 
 
-        data.results.forEach(el => 
+        data.data.forEach(obj => 
              DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
-                <h3 class="cardtitle">${el.name}</h3>
-                <img class="cover" src="${front_default}" alt="image">
-                <h4 class="misc">Primary Type: ${el.types.type.name}</h4>
-                <h5 class="misc">Secondary Type: ${el.primaryType.names.English}</h5>
+                <h3 class="cardtitle">${obj.name}</h3>
+                <img class="cover" src="${obj.images.icon}" alt="image">
+                <h4 class="misc">${obj.rarity.displayValue}</h4>
+                <h5 class="misc">${obj.description}</h5>
             </div>`
             ) 
         )
