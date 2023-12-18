@@ -45,12 +45,13 @@ function clearSearchFields(){
 };
 
 function addCard(arr){
-    arr.forEach((x)=> DOMSelectors.container.insertAdjacentHTML(
+    arr.forEach((obj)=> DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
         `<div class = "card">
-        <h3 class="title">${x.id}</h3>
-        <h4 class="misc">Primary Type: ${el.primaryType.names.English}</h4>
-        <h5 class="misc">Secondary Type: ${el.primaryType.names.English}</h5>
+        <h3 class="cardtitle">${obj.name}</h3>
+        <img class="cover" src="${obj.images.icon}" alt="image">
+        <h4 class="rarity">${obj.rarity.displayValue}</h4>
+        <h5 class="misc">${obj.description}</h5>
     </div>`
 ))};
 
@@ -76,16 +77,16 @@ DOMSelectors.form.addEventListener("submit", function(event){
 
    expansion()*/
 
-function filtering(){
+/* function filtering(){
     let buttons = document.querySelectorAll("#button")  
    buttons.forEach((btn) => btn.addEventListener("click", function(){
        clearHTML();
        let typeHoliday = btn.textContent.toLowerCase() 
-       let newArr = URL.filter((holiday) => holiday.type.includes(typeHoliday));
+       let newArr = URL.filter((item) => item.type.includes(typeHoliday));
        insertCard(newArr)
    })); 
    };
-   filtering()
+   filtering() */
 
 
 
