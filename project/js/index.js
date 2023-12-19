@@ -77,16 +77,16 @@ DOMSelectors.form.addEventListener("submit", function(event){
 
    expansion()*/
 
-/* function filtering(){
-    let buttons = document.querySelectorAll("#button")  
-   buttons.forEach((btn) => btn.addEventListener("click", function(){
+function filtering(){
+    let options = document.querySelectorAll("#option")  
+   options.forEach((choice) => choice.addEventListener("click", function(){
        clearHTML();
-       let typeHoliday = btn.textContent.toLowerCase() 
-       let newArr = URL.filter((item) => item.type.includes(typeHoliday));
+       let category = btn.textContent.toLowerCase() 
+       let newArr = URL.filter((item) => item.path.includes(category));
        insertCard(newArr)
    })); 
    };
-   filtering() */
+   filtering() 
 
 
 

@@ -5,7 +5,8 @@ const DOMSelectors = {
     submitbtn: document.getElementById("submit"),
     inputTitle: document.getElementById('inputTitle'),
     form: document.querySelector("form"),
-    card: document.querySelector("card")
+    card: document.querySelector("card"),
+    option: document.querySelector("option"),
 };
 
 export {DOMSelectors}; 
