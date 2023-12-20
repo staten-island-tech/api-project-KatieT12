@@ -82,7 +82,7 @@ function filtering(){
    options.forEach((choice) => choice.addEventListener("click", function(){
        clearHTML();
        let category = btn.textContent.toLowerCase() 
-       let newArr = URL.filter((item) => item.path.includes(category));
+       let newArr = cosmetics.filter((item) => item.type.object.value.includes(category));
        insertCard(newArr)
    })); 
    };
