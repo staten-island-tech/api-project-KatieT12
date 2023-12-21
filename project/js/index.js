@@ -88,21 +88,15 @@ DOMSelectors.form.addEventListener("submit", function(event){
 //    };
 //    filtering() 
  function filtering(){
-   let buttons = document.querySelectorAll("#btns")  
+   let buttons = document.querySelectorAll(".btns")  
   buttons.forEach((btn) => btn.addEventListener("click", function(){
    clearHTML();
         let category = btn.textContent.toLowerCase() 
-        let newArr = cosmetics.filter((item) => item.type.object.value.includes(category));
-        insertCard(newArr)
+        let newArr = data.data.filter((item) => item.path.includes(category));
+        addCard(newArr)
        })); 
    };
 filtering() 
-
-
-
-
-
-
 
     } catch (error) {
        console.log(error, "Uh oh"); 

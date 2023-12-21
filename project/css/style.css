@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5{
 #btns{
   align-items: center;
 }
-#changetheme, #btns{
+#changetheme, .btns{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
@@ -92,7 +92,20 @@ h1, h2, h3, h4, h5{
   height: 10vh ;
   color: var(--third);
 }
-#changetheme:hover, #btns:hover{
+.btns{
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline;
+  margin: 1rem auto;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  background-color:var(--primary);
+  height: 10vh ;
+  color: var(--third);
+}
+#changetheme:hover, .btns:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
