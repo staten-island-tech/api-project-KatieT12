@@ -81,13 +81,13 @@ h1, h2, h3, h4, h5{
 #changetheme, #btns{
   text-decoration: none;
   padding: 1.5rem 4rem;
-  display: inline-block;
+  align-items: center;
+  display: flex;
   margin: 1rem auto;
   font-size: 2rem;
   border: none;
   border-radius: 10rem;
   transition: all 0.2s;
-  color: var(--secondary);
   background-color:var(--primary);
   height: 10vh ;
   color: var(--third);
@@ -118,8 +118,9 @@ img{
   width: 35%;
   margin-bottom: 2px;
 }
-#cosmeticstitle{
+#cosmeticsheading{
 text-align: left;
+color: var(--third);
 }
 .cardtitle{
   margin-top: 1rem;

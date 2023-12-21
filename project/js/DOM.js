@@ -7,7 +7,8 @@ const DOMSelectors = {
     form: document.querySelector("form"),
     card: document.querySelector("card"),
     // option: document.querySelector("#option"),
-    dropdownContent: document.querySelectorAll("#dropdown-content")
+    // dropdownContent: document.querySelectorAll("#dropdown-content")
+    buttons: document.querySelector("#btns"),
 };
 
 export {DOMSelectors}; 
