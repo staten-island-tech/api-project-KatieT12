@@ -75,10 +75,10 @@ h1, h2, h3, h4, h5{
   text-align: center;
   margin-bottom: 5rem;
 }
-#buttons{
+#btns{
   align-items: center;
 }
-#changetheme, #button{
+#changetheme, #btns{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5{
   height: 10vh ;
   color: var(--third);
 }
-#changetheme:hover, #button:hover{
+#changetheme:hover, #btns:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -117,6 +117,9 @@ background-color: var(--primary)
 img{
   width: 35%;
   margin-bottom: 2px;
+}
+#cosmeticstitle{
+text-align: left;
 }
 .cardtitle{
   margin-top: 1rem;
@@ -148,7 +151,7 @@ img{
     padding-right: 10px;
   }
   /*drop down menu attempts*/
-  select {
+  /* select {
     font-size: 0.9rem;
     padding: 2px 5px;
   }
@@ -185,4 +188,4 @@ img{
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: #3e8e41;} */
