@@ -9,6 +9,7 @@ const DOMSelectors = {
     // option: document.querySelector("#option"),
     // dropdownContent: document.querySelectorAll("#dropdown-content")
     buttons: document.querySelector(".btns"),
+    all: document.querySelector(".all"), 
 };
 
 export {DOMSelectors}; 

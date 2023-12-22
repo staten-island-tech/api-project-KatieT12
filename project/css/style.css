@@ -45,7 +45,6 @@ body,
 .title{
   background-color: var(--third);
   text-align: center;
-  margin-top: 5rem;
   color: var(--fourth);
 }
 .main{
@@ -78,7 +77,7 @@ h1, h2, h3, h4, h5{
 #btns{
   align-items: center;
 }
-#changetheme, .btns{
+#changetheme, .btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
@@ -92,7 +91,7 @@ h1, h2, h3, h4, h5{
   height: 10vh ;
   color: var(--third);
 }
-.btns{
+.btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline;
@@ -105,7 +104,7 @@ h1, h2, h3, h4, h5{
   height: 10vh ;
   color: var(--third);
 }
-#changetheme:hover, .btns:hover{
+#changetheme:hover, .btns:hover, .all:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -131,9 +130,9 @@ img{
   width: 35%;
   margin-bottom: 2px;
 }
-#cosmeticsheading{
-text-align: left;
-color: var(--third);
+.cosmeticsheading{
+color: var(--fourth);
+margin: 2rem;
 }
 .cardtitle{
   margin-top: 1rem;
