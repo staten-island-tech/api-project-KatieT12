@@ -68,20 +68,22 @@ DOMSelectors.form.addEventListener("submit", function(event){
     }
 }); 
 
-/* function expansion(){ expanding card when clicking on it TBD
-    let cards = document.querySelectorAll(".card")  
-   cards.forEach((card) => card.addEventListener("click", function(){
-       clearHTML();
-       arr.forEach((x)=> DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `
-        <h3 class="title">${x.id}</h3>
-        <h4 class="misc">Primary Type: ${el.primaryType.names.English}</h4>
-        <h5 class="misc">Secondary Type: ${el.primaryType.names.English}</h5>`
-))}))}; 
+// function expansion(){ //expanding card when clicking on it TBD
+//     let cards = document.querySelector("#card")  
+//    cards.forEach((card) => card.addEventListener("click", function(){
+//        clearHTML();
+//        DOMSelectors.container.insertAdjacentHTML(
+//         "beforeend",
+//         `<div class = "expandedCard">
+//         <h3 class="cardtitle">${obj.name}</h3>
+//         <img class="cover" src="${obj.images.icon}" alt="image">
+//         <h4 class="rarity">${obj.rarity.displayValue}</h4>
+//         <h5 class="misc">${obj.description}</h5>
+//     </div>`
+// )}))}; 
 
-   expansion()*/
-
+//    expansion()
+/*
 // function filtering(){
 //     let options = document.querySelectorAll("#dropdown-content")  
 //    options.forEach((choice) => choice.addEventListener("click", function(){
@@ -91,7 +93,7 @@ DOMSelectors.form.addEventListener("submit", function(event){
 //        insertCard(newArr)
 //    })); 
 //    };
-//    filtering() 
+//    filtering() */
  function filtering(){
    let buttons = document.querySelectorAll(".btns")  
   buttons.forEach((btn) => btn.addEventListener("click", function(){
