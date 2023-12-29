@@ -59,9 +59,8 @@ DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault(); 
     clearHTML();
     clearSearchFields();
-
     if(data.data.filter((el) => el.name === "inputName.value")){
-        newArr = data.data.filter((el) => el.name === "inputName.value")
+        const newArr = data.data.filter((el) => el.name === "inputName.value")
         addCard(newArr);
     } else{
         DOMSelectors.container.innerHTML ="Couldn't find that";
