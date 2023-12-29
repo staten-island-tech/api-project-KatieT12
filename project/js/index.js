@@ -36,36 +36,36 @@ async function getData(URL){
             }
         });
         
-function clearHTML(){
-    DOMSelectors.container.innerHTML = "";
-};
+// function clearHTML(){
+//     DOMSelectors.container.innerHTML = "";
+// };
         
-function clearSearchFields(){
-    inputName.value = "";
-};
+// function clearSearchFields(){
+//     inputName.value = "";
+// };
 
-function addCard(arr){
-    arr.forEach((obj)=> DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class = "card">
-        <h3 class="cardtitle">${obj.name}</h3>
-        <img class="cover" src="${obj.images.icon}" alt="image">
-        <h4 class="rarity">${obj.rarity.displayValue}</h4>
-        <h5 class="misc">${obj.description}</h5>
-    </div>`
-))};
+// function addCard(arr){
+//     arr.forEach((obj)=> DOMSelectors.container.insertAdjacentHTML(
+//         "beforeend",
+//         `<div class = "card">
+//         <h3 class="cardtitle">${obj.name}</h3>
+//         <img class="cover" src="${obj.images.icon}" alt="image">
+//         <h4 class="rarity">${obj.rarity.displayValue}</h4>
+//         <h5 class="misc">${obj.description}</h5>
+//     </div>`
+// ))};
 
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault(); 
-    clearHTML();
-    clearSearchFields();
-    if(data.data.filter((el) => el.name === "inputName.value")){
-        const newArr = data.data.filter((el) => el.name === "inputName.value")
-        addCard(newArr);
-    } else{
-        DOMSelectors.container.innerHTML ="Couldn't find that";
-    }
-}); 
+// DOMSelectors.form.addEventListener("submit", function(event){
+//     event.preventDefault(); 
+//     clearHTML();
+//     clearSearchFields();
+//     if(data.data.filter((el) => el.name === "inputName.value")){
+//         const newArr = data.data.filter((el) => el.name === "inputName.value")
+//         addCard(newArr);
+//     } else{
+//         DOMSelectors.container.innerHTML ="Couldn't find that";
+//     }
+// }); 
 
 // function expansion(){ //expanding card when clicking on it TBD
 //     let cards = document.querySelector("#card")  
