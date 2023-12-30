@@ -161,63 +161,15 @@ margin: 2rem;
   color: var(--third);
   margin-bottom: 2px;
 }
-.container, .popup-image{
+.container{
   display: flex;
   width: 90%;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 5rem auto;
+  margin-top: 15rem;
   padding: 5px;
   flex-direction: row;
-  }
-.popup-image{
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #2f3136e6;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
-  display: none;
-}
-.popup-image span{
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 40px;
-  font-weight: bolder;
-  color: #fafafa;
-  cursor: pointer;
-  z-index: 100;
-  }
-.popup-image .card{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 5px solid #fafafa;
-  border-radius: 5px;
-  width: 750px;
-  object-fit: cover;
-
-}
-  label {
-    font-family: sans-serif;
-    font-size: 1rem;
-    padding-right: 10px;
-  }
-  .expandedCard{
-    height: 100vh;
-    width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  border-color: var(--fourth);
-  border-style:outset;
-  margin-bottom: 40px;
-  background-color: var(--primary)
   }
   /*drop down menu attempts*/
   /* select {
@@ -258,4 +210,28 @@ margin: 2rem;
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;} */
-  
+  ul{
+    position: absolute;
+    top: 55%;
+    left: 45.6%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 20px 0;
+    background: #e4e5f1;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    margin: 5rem;
+  }
+ul li{
+  list-style: none;
+  text-align: center;
+  display: block;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 3rem;
+}
+ul li a{
+  text-decoration: none;
+  padding: 0 50px;
+  display: block;
+}
