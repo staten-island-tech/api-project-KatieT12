@@ -129,15 +129,14 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 border-radius: 20px;
-border-color: var(--fourth);
-border-style:outset;
 margin-bottom: 40px;
 background-color: var(--primary)
 }
 .card:hover{
   transform: translateY(-2px);
-  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 0.5rem var(--third);
   cursor: pointer;
+  transition: 0.6s;
 }
 img{
   width: 35%;

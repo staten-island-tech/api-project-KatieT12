@@ -68,18 +68,18 @@ DOMSelectors.form.addEventListener("submit", function(event){
 }); 
 
 // function expansion(){ //expanding card when clicking on it TBD
-//     let cards = document.querySelector("#card")  
+//     let cards = document.querySelectorAll(".card")  
 //    cards.forEach((card) => card.addEventListener("click", function(){
 //        clearHTML();
-//        DOMSelectors.container.insertAdjacentHTML(
+//        cards.forEach((obj) => DOMSelectors.container.insertAdjacentHTML(
 //         "beforeend",
-//         `<div class = "expandedCard">
-//         <h3 class="cardtitle">${obj.name}</h3>
-//         <img class="cover" src="${obj.images.icon}" alt="image">
-//         <h4 class="rarity">${obj.rarity.displayValue}</h4>
-//         <h5 class="misc">${obj.description}</h5>
-//     </div>`
-// )}))}; 
+//                 `<div class = "card">
+//                 <h3 class="cardtitle">${obj.name}</h3>
+//                 <img class="cover" src="${obj.icon}" alt="image">
+//                 <h4 class="rarity">${obj.displayValue}</h4>
+//                 <h5 class="misc">${obj.description}</h5>
+//             </div>`
+// ))}))}; 
 
 //    expansion()
 /*
