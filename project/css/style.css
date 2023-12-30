@@ -130,11 +130,11 @@ align-items: center;
 justify-content: space-around;
 border-radius: 20px;
 margin-bottom: 40px;
-background-color: var(--primary)
+background-color: var(--primary);
+box-shadow: rgba(36, 36, 36, 0.01) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.01) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.01) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .card:hover{
   transform: translateY(-2px);
-  box-shadow: 0 10px 0.5rem var(--third);
   cursor: pointer;
   transition: 0.6s;
 }
@@ -161,7 +161,7 @@ margin: 2rem;
   color: var(--third);
   margin-bottom: 2px;
 }
-.container{
+.container, .popup-image{
   display: flex;
   width: 90%;
   flex-wrap: wrap;
@@ -170,6 +170,37 @@ margin: 2rem;
   padding: 5px;
   flex-direction: row;
   }
+.popup-image{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #2f3136e6;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+.popup-image span{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fafafa;
+  cursor: pointer;
+  z-index: 100;
+  }
+.popup-image .card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fafafa;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+
+}
   label {
     font-family: sans-serif;
     font-size: 1rem;
@@ -227,3 +258,4 @@ margin: 2rem;
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+  
