@@ -94,10 +94,12 @@ DOMSelectors.form.addEventListener("submit", function(event){
 //    };
 //    filtering() */
  function filtering(){
-   let buttons = document.querySelectorAll(".btns")  
-  buttons.forEach((btn) => btn.addEventListener("click", function(){
+   let navbar = document.querySelectorAll("ul")  
+   navbar.forEach((btn) => btn.addEventListener("click", function(event){
+   event.preventDefault();
    clearHTML();
-        let category = btn.textContent 
+        let name = document.querySelectorAll(".name")
+        let category = name.textContent 
         let newArr = data.data.filter((item) => item.path.includes(category));
         addCard(newArr)
        })); 
