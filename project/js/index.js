@@ -105,8 +105,8 @@ DOMSelectors.form.addEventListener("submit", function(event){
        })); 
    };
    filtering() 
-
-DOMSelectors.all.addEventListener("click", function(event){
+let all = document.querySelector(".all")
+all.addEventListener("click", function(event){
     event.preventDefault();
     clearHTML();
     data.data.forEach(obj => 

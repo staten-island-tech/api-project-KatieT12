@@ -47,6 +47,7 @@ body,
   background-color: var(--third);
   text-align: center;
   color: var(--fourth);
+  font-family: 'Hammersmith One', sans-serif;
 }
 .main{
   background-color: var(--secondary);
@@ -141,24 +142,24 @@ img{
   width: 35%;
   margin-bottom: 2px;
 }
-.cosmeticsheading{
-color: var(--fourth);
-margin: 2rem;
-}
 .cardtitle{
   margin-top: 1rem;
   font-size: var(--h4);
   color: var(--third);
+  font-family: 'Hammersmith One', sans-serif;
 }
 .misc{
   font-size: var(--h4);
   color: var(--third);
-  margin-bottom: 2px;
+  margin: 5px;
+  font-family: 'Pridi', serif;
+  font-size: 1.5rem;
 }
 .rarity{
   font-size: var(--h4);
   color: var(--third);
-  margin-bottom: 2px;
+  margin-bottom: -20px;
+  font-family: 'Pridi', serif;
 }
 .container{
   display: flex;
@@ -227,21 +228,54 @@ ul li{
   list-style: none;
   text-align: center;
   display: block;
-  border-right: 1px solid var(--third);
-  font-size: 3rem;
+  border-right: 0.5px double var(--third);
+  border-left: 0.5px double var(--third);
+  font-size: 2.5rem;
+  font-family: 'Paytone One', sans-serif;
 }
 ul li a{
   text-decoration: none;
-  padding: 0 50px;
+  padding: 0 40px;
   display: block;
   color: var(--third);
 }
-i{
-  height: 100; width: 100;
+
+li{
+  margin-bottom: -1rem;
+  border: var(--third);
 }
+
 #name{
   margin-top: 10rem;
 }
 .fa-solid{
 line-height: 7;
+}
+.pickaxeicon{
+  width: 85%;
+  transform: translate(0,20%);
+  margin-bottom: 1.2rem;
+}
+.discoicon{
+  width: 110%;
+  transform: translate(0,20%);
+  margin-bottom: 1.2rem;
+}
+.wrapicon{
+  width: 110%;
+  transform: translate(0,20%);
+  margin-bottom: 1.5rem;
+}
+.glidericon{
+  width: 140%;
+  transform: translate(-12%,10%);
+  margin-bottom: 0.5rem;
+}
+.allicon{
+  width: 300%;
+  transform: translate(-30%,20%);
+  margin-bottom: 1.1rem;
+}
+.icon{
+  color: var(--third);
 }
