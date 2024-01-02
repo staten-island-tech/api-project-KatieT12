@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5{
 #btns{
   align-items: center;
 }
-#changetheme, .btns{
+#changetheme, .btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5{
   box-shadow: 0px 0px 10px var(--third);
 
 }
-.btns{
+.btns,.all{
   text-decoration: none;
   padding: 1.5rem 4rem;
    align-items: center;
@@ -109,6 +109,10 @@ h1, h2, h3, h4, h5{
   background-color:var(--primary);
   height: 10vh ;
   color: var(--third);
+}
+nav{
+  display: flex;
+  align-items: center;
 }
 #changetheme:hover, .btns:hover{
   /* transform: translateY(-2px);
@@ -248,7 +252,7 @@ li{
 #name{
   margin-top: 10rem;
 }
-.fa-solid{
+/* .fa-solid{
 line-height: 7;
 }
 .pickaxeicon{
@@ -272,10 +276,12 @@ line-height: 7;
   margin-bottom: 0.5rem;
 }
 .allicon{
-  width: 300%;
+  width: 100%;
   transform: translate(-30%,20%);
   margin-bottom: 1.1rem;
 }
-.icon{
-  color: var(--third);
-}
+*/
+.icons{
+  width: 1%;
+} 
+
