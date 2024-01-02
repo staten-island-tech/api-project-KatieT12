@@ -216,7 +216,7 @@ img{
     position: absolute;
     top: 55%;
     left: 45.6%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-180%);
     margin: 0;
     padding: 20px 0;
     background: var(--primary);
