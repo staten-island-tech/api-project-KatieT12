@@ -47,6 +47,7 @@ body,
   background-color: var(--third);
   text-align: center;
   color: var(--fourth);
+  font-family: 'Hammersmith One', sans-serif;
 }
 .main{
   background-color: var(--secondary);
@@ -78,7 +79,7 @@ h1, h2, h3, h4, h5{
 #btns{
   align-items: center;
 }
-#changetheme, .btns, .all{
+#changetheme, .btns{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
@@ -95,7 +96,7 @@ h1, h2, h3, h4, h5{
   box-shadow: 0px 0px 10px var(--third);
 
 }
-.btns, .all{
+.btns{
   text-decoration: none;
   padding: 1.5rem 4rem;
    align-items: center;
@@ -109,7 +110,7 @@ h1, h2, h3, h4, h5{
   height: 10vh ;
   color: var(--third);
 }
-#changetheme:hover, .btns:hover, .all:hover{
+#changetheme:hover, .btns:hover{
   /* transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2); */
   background: var(--primary);
@@ -131,93 +132,44 @@ justify-content: space-around;
 border-radius: 20px;
 margin-bottom: 40px;
 background-color: var(--primary);
-box-shadow: rgba(36, 36, 36, 0.01) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.01) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.01) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+/* box-shadow: rgba(36, 36, 36, 0.01) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.01) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.01) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
 }
 .card:hover{
   transform: translateY(-2px);
-  cursor: pointer;
   transition: 0.6s;
 }
 img{
   width: 35%;
   margin-bottom: 2px;
 }
-.cosmeticsheading{
-color: var(--fourth);
-margin: 2rem;
-}
 .cardtitle{
   margin-top: 1rem;
   font-size: var(--h4);
   color: var(--third);
+  font-family: 'Hammersmith One', sans-serif;
 }
 .misc{
   font-size: var(--h4);
   color: var(--third);
-  margin-bottom: 2px;
+  margin: 5px;
+  font-family: 'Pridi', serif;
+  font-size: 1.5rem;
 }
 .rarity{
   font-size: var(--h4);
   color: var(--third);
-  margin-bottom: 2px;
+  margin-bottom: -20px;
+  font-family: 'Pridi', serif;
 }
-.container, .popup-image{
+.container{
   display: flex;
   width: 90%;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 5rem auto;
+  margin-top: 15rem;
   padding: 5px;
   flex-direction: row;
-  }
-.popup-image{
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #2f3136e6;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
-  display: none;
-}
-.popup-image span{
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 40px;
-  font-weight: bolder;
-  color: #fafafa;
-  cursor: pointer;
-  z-index: 100;
-  }
-.popup-image .card{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 5px solid #fafafa;
-  border-radius: 5px;
-  width: 750px;
-  object-fit: cover;
-
-}
-  label {
-    font-family: sans-serif;
-    font-size: 1rem;
-    padding-right: 10px;
-  }
-  .expandedCard{
-    height: 100vh;
-    width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  border-color: var(--fourth);
-  border-style:outset;
-  margin-bottom: 40px;
-  background-color: var(--primary)
   }
   /*drop down menu attempts*/
   /* select {
@@ -258,4 +210,72 @@ margin: 2rem;
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;} */
-  
+
+  /* navigation bar*/
+  ul{
+    position: absolute;
+    top: 55%;
+    left: 45.6%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 20px 0;
+    background: var(--primary);
+    display: flex;
+    border-radius: 10px;
+    margin: 5rem;
+  }
+ul li{
+  list-style: none;
+  text-align: center;
+  display: block;
+  border-right: 0.5px double var(--third);
+  border-left: 0.5px double var(--third);
+  font-size: 2.5rem;
+  font-family: 'Paytone One', sans-serif;
+}
+ul li a{
+  text-decoration: none;
+  padding: 0 40px;
+  display: block;
+  color: var(--third);
+}
+
+li{
+  margin-bottom: -1rem;
+  border: var(--third);
+}
+
+#name{
+  margin-top: 10rem;
+}
+.fa-solid{
+line-height: 7;
+}
+.pickaxeicon{
+  width: 85%;
+  transform: translate(0,20%);
+  margin-bottom: 1.2rem;
+}
+.discoicon{
+  width: 110%;
+  transform: translate(0,20%);
+  margin-bottom: 1.2rem;
+}
+.wrapicon{
+  width: 110%;
+  transform: translate(0,20%);
+  margin-bottom: 1.5rem;
+}
+.glidericon{
+  width: 140%;
+  transform: translate(-12%,10%);
+  margin-bottom: 0.5rem;
+}
+.allicon{
+  width: 300%;
+  transform: translate(-30%,20%);
+  margin-bottom: 1.1rem;
+}
+.icon{
+  color: var(--third);
+}
