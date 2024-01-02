@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5{
 .btns{
   text-decoration: none;
   padding: 1.5rem 4rem;
-   align-items: center;
+  align-items: center;
   display: inline;
   margin: 0.3rem;
   font-size: 2rem;
@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5{
   background-color:var(--primary);
   height: 10vh ;
   color: var(--third);
+  width: 10vw;
 }
 #changetheme:hover, .btns:hover{
   /* transform: translateY(-2px);
@@ -212,6 +213,7 @@ img{
   .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
   /* navigation bar*/
+  /* oldnavbar
   ul{
     position: absolute;
     top: 55%;
@@ -247,35 +249,36 @@ li{
 
 #name{
   margin-top: 10rem;
-}
+} */
 .fa-solid{
-line-height: 7;
+line-height: 3;
 }
 .pickaxeicon{
-  width: 85%;
+  width: 50%;
   transform: translate(0,20%);
   margin-bottom: 1.2rem;
 }
 .discoicon{
-  width: 110%;
+  width: 50%;
   transform: translate(0,20%);
   margin-bottom: 1.2rem;
 }
 .wrapicon{
-  width: 110%;
+  width: 50%;
   transform: translate(0,20%);
   margin-bottom: 1.5rem;
 }
 .glidericon{
-  width: 140%;
-  transform: translate(-12%,10%);
+  width: 50%;
+  transform: translate(0%,20%);
   margin-bottom: 0.5rem;
 }
 .allicon{
-  width: 300%;
-  transform: translate(-30%,20%);
+  width: 10%;
+  transform: translate(0%,20%);
   margin-bottom: 1.1rem;
 }
+
 .icon{
   color: var(--third);
 }
