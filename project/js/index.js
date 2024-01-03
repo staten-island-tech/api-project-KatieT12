@@ -23,6 +23,7 @@ async function getData(URL){
                 <img class="cover" src="${obj.images.icon}" alt="image">
                 <h4 class="rarity">${obj.rarity.displayValue}</h4>
                 <h5 class="misc">${obj.description}</h5>
+                <button class = "more">Learn More</button>
             </div>`
             ) 
         )
@@ -94,12 +95,11 @@ DOMSelectors.form.addEventListener("submit", function(event){
 //    };
 //    filtering() */
  function filtering(){
-   let navbar = document.querySelectorAll("ul")  
-   navbar.forEach((btn) => btn.addEventListener("click", function(event){
+   let buttons = document.querySelectorAll(".btns")  
+   buttons.forEach((btn) => btn.addEventListener("click", function(event){
    event.preventDefault();
    clearHTML();
-        let name = document.querySelectorAll(".name")
-        let category = name.textContent 
+        let category = btn.textContent 
         let newArr = data.data.filter((item) => item.path.includes(category));
         addCard(newArr)
        })); 

@@ -76,10 +76,7 @@ h1, h2, h3, h4, h5{
   text-align: center;
   margin-bottom: 5rem;
 }
-#btns{
-  align-items: center;
-}
-#changetheme, .btns{
+#changetheme, .btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
@@ -96,7 +93,7 @@ h1, h2, h3, h4, h5{
   box-shadow: 0px 0px 10px var(--third);
 
 }
-.btns{
+.btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
@@ -107,11 +104,14 @@ h1, h2, h3, h4, h5{
   border-radius: 10rem;
   transition: all 0.2s;
   background-color:var(--primary);
-  height: 10vh ;
+  height: 15vh ;
   color: var(--third);
   width: 10vw;
 }
-#changetheme:hover, .btns:hover{
+.all{
+  transform: translate(0,-10%);
+}
+#changetheme:hover, .btns:hover, .all:hover{
   /* transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2); */
   background: var(--primary);
@@ -121,6 +121,18 @@ h1, h2, h3, h4, h5{
 }
 .btn:active {
   scale: 0.92;
+}
+.more{
+  height: 70px; width: 200px;
+  font-size: var(--h4);
+  border: none;
+  border-radius: 1rem;  
+  background-color:var(--secondary);
+  color: var(--third);
+  font-family: 'Hammersmith One', sans-serif;
+}
+.more:hover{
+  cursor: pointer;
 }
 /*carddetails*/
 .card{
@@ -140,8 +152,8 @@ background-color: var(--primary);
   transition: 0.6s;
 }
 img{
-  width: 35%;
-  margin-bottom: 2px;
+  width: 50%;
+  margin-bottom: 0px;
 }
 .cardtitle{
   margin-top: 1rem;
@@ -274,11 +286,15 @@ line-height: 3;
   margin-bottom: 0.5rem;
 }
 .allicon{
-  width: 10%;
+  width: 50%;
   transform: translate(0%,20%);
   margin-bottom: 1.1rem;
 }
 
 .icon{
   color: var(--third);
+}
+.nav{
+  display: flex;
+  align-items: center;
 }
