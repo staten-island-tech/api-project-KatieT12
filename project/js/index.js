@@ -105,6 +105,22 @@ DOMSelectors.form.addEventListener("submit", function(event){
        })); 
    };
    filtering() 
+
+let learnmore = document.querySelectorAll(".more")
+learnmore.forEach((btn) => btn.addEventListener("click", function(event){
+    event.preventDefault();
+    clearHTML();
+    DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class = "expandedCard">
+        <h3 class="cardtitle">${learnmore.parentElement.name}</h3>
+        <img class="cover" src="${learnmore.parentElement.icon}" alt="image">
+        <h4 class="rarity">${learnmore.parentElement.displayValue}</h4>
+        <h5 class="misc">${learnmore.parentElement.description}</h5>
+    </div>`
+    ) 
+}))
+
 let all = document.querySelector(".all")
 all.addEventListener("click", function(event){
     event.preventDefault();
@@ -120,6 +136,7 @@ all.addEventListener("click", function(event){
        </div>`
        ) 
    )
+
 });
 
     } catch (error) {
