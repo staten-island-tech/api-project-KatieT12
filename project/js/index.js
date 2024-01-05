@@ -100,7 +100,7 @@ DOMSelectors.form.addEventListener("submit", function(event){
    event.preventDefault();
    clearHTML();
         let category = btn.textContent 
-        let newArr = data.data.filter((item) => item.path.includes(category));
+        let newArr = data.data.items.filter((item) => item.path.includes(category));
         addCard(newArr)
        })); 
    };
@@ -127,7 +127,7 @@ let all = document.querySelector(".all")
 all.addEventListener("click", function(event){
     event.preventDefault();
     clearHTML();
-    data.data.forEach(obj => 
+    data.data.items.forEach(obj => 
         DOMSelectors.container.insertAdjacentHTML(
            "beforeend",
            `<div class = "card">
