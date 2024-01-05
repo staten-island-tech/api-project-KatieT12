@@ -1,7 +1,7 @@
 import {DOMSelectors} from "./DOM";
 import '../css/style.css';
 
-const URL = `https://fortnite-api.com/v2/cosmetics/br`;
+const URL = `https://fortnite-api.com/v2/cosmetics/br/new`;
 //https://gateway.marvel.com/v1/public/comics?ts=1&apikey=81cee0fda2f0bdfd993ee07078a68999&hash=4486abec9feb734885049f2117764b2b; marvel alt just in case 
 
 async function getData(URL){
@@ -15,7 +15,7 @@ async function getData(URL){
         const data = await response.json();
         console.log(data); 
 
-        data.data.forEach(obj => 
+        data.data.items.forEach(obj => 
              DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `<div class = "card">
@@ -108,17 +108,19 @@ DOMSelectors.form.addEventListener("submit", function(event){
 
 let learnmore = document.querySelectorAll(".more")
 learnmore.forEach((btn) => btn.addEventListener("click", function(event){
-    event.preventDefault();
-    clearHTML();
-    DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class = "expandedCard">
-        <h3 class="cardtitle">${learnmore.parentElement.name}</h3>
-        <img class="cover" src="${learnmore.parentElement.icon}" alt="image">
-        <h4 class="rarity">${learnmore.parentElement.displayValue}</h4>
-        <h5 class="misc">${learnmore.parentElement.description}</h5>
-    </div>`
-    ) 
+    //event.preventDefault();
+    //clearHTML();
+    //document.querySelector(".expandedCard").style.display = "flex"
+    console.log(event.target.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent);
+    // DOMSelectors.container.insertAdjacentHTML(
+    //     "beforeend",
+    //     `<div class = "expandedCard">
+    //     <h3 class="cardtitle">${learnmore.parentElement.name}</h3>
+    //     <img class="cover" src="${learnmore.parentElement.icon}" alt="image">
+    //     <h4 class="rarity">${learnmore.parentElement.displayValue}</h4>
+    //     <h5 class="misc">${learnmore.parentElement.description}</h5>
+    // </div>`
+    // ) 
 }))
 
 let all = document.querySelector(".all")
@@ -145,3 +147,4 @@ all.addEventListener("click", function(event){
     }
 }
 getData(URL); 
+//event . target element
