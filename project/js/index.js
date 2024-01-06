@@ -53,6 +53,7 @@ function addCard(arr){
         <img class="cover" src="${obj.images.icon}" alt="image">
         <h4 class="rarity">${obj.rarity.displayValue}</h4>
         <h5 class="misc">${obj.description}</h5>
+        <button class = "more">Learn More</button>
     </div>`
 ))};
 
@@ -109,18 +110,19 @@ DOMSelectors.form.addEventListener("submit", function(event){
 let learnmore = document.querySelectorAll(".more")
 learnmore.forEach((btn) => btn.addEventListener("click", function(event){
     //event.preventDefault();
-    //clearHTML();
-    //document.querySelector(".expandedCard").style.display = "flex"
+    clearHTML();
+    let popUp = document.querySelector(".expandedCard")
+    popUp.style.display = "flex"
     console.log(event.target.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent);
-    // DOMSelectors.container.insertAdjacentHTML(
-    //     "beforeend",
-    //     `<div class = "expandedCard">
-    //     <h3 class="cardtitle">${learnmore.parentElement.name}</h3>
-    //     <img class="cover" src="${learnmore.parentElement.icon}" alt="image">
-    //     <h4 class="rarity">${learnmore.parentElement.displayValue}</h4>
-    //     <h5 class="misc">${learnmore.parentElement.description}</h5>
-    // </div>`
-    // ) 
+    DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class = "expandedCard">
+        <h3 class="cardtitle">${event.target.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent}</h3>
+        <img class="cover" src="${learnmore.parentElement.icon}" alt="image">
+        <h4 class="rarity">${learnmore.parentElement.displayValue}</h4>
+        <h5 class="misc">${learnmore.parentElement.description}</h5>
+    </div>`
+    ) 
 }))
 
 let all = document.querySelector(".all")
@@ -129,13 +131,14 @@ all.addEventListener("click", function(event){
     clearHTML();
     data.data.items.forEach(obj => 
         DOMSelectors.container.insertAdjacentHTML(
-           "beforeend",
-           `<div class = "card">
-           <h3 class="cardtitle">${obj.name}</h3>
-           <img class="cover" src="${obj.images.icon}" alt="image">
-           <h4 class="rarity">${obj.rarity.displayValue}</h4>
-           <h5 class="misc">${obj.description}</h5>
-       </div>`
+            "beforeend",
+            `<div class = "card">
+            <h3 class="cardtitle">${obj.name}</h3>
+            <img class="cover" src="${obj.images.icon}" alt="image">
+            <h4 class="rarity">${obj.rarity.displayValue}</h4>
+            <h5 class="misc">${obj.description}</h5>
+            <button class = "more">Learn More</button>
+        </div>`
        ) 
    )
 
