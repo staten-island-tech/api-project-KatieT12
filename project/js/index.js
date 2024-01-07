@@ -23,7 +23,7 @@ async function getData(URL){
                 <img class="cover" src="${obj.images.icon}" alt="image">
                 <h4 class="rarity">${obj.rarity.displayValue}</h4>
                 <h5 class="misc">${obj.description}</h5>
-                <h5 class="misc">ID = ${obj.id}</h5>
+                <h5 class="id">ID = ${obj.id}</h5>
             </div>`
             ) 
         )

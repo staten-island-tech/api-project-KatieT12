@@ -17,7 +17,7 @@ body,
   /*lightmode palette*/
   --light1:#F0F4FFff;
   --light2: #B4C1D2ff;
-  --light3:#5F7D88;
+  --light3:#222C30;
   --light4: #F0F4FFff;
   --light5: #F0F4FFff;
   --lightbg: url('../css/img/pexels-johannes-plenio-1103970.jpg');
@@ -136,7 +136,7 @@ nav{
 }
 /*carddetails*/
 .card{
-  height: 50vh;
+  height: 60vh;
   width: 25vw;
 display: flex;
 flex-direction: column;
@@ -159,7 +159,7 @@ img{
   margin-bottom: 0px;
 }
 .cardtitle{
-  margin-top: 1rem;
+  margin: 1rem auto;
   font-size: var(--h4);
   color: var(--third);
   font-family: 'Bebas Neue', sans-serif;
@@ -167,14 +167,23 @@ img{
 .misc{
   font-size: var(--h4);
   color: var(--third);
-  margin: 5px;
+  margin: 10px auto;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: var(--h4);
+}
+.id{
+  font-size: var(--h4);
+  color: var(--third);
+  margin: 10px auto;
   font-family: 'Red Hat Display', sans-serif;
   font-size: var(--h4);
 }
 .rarity{
   font-size: var(--h4);
   color: var(--third);
-  margin-bottom: -20px;
+  margin-bottom: 10px auto;
   font-family: 'Bebas Neue', sans-serif;
 }
 .container{
