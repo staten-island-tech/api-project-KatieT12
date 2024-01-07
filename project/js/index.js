@@ -23,7 +23,7 @@ async function getData(URL){
                 <img class="cover" src="${obj.images.icon}" alt="image">
                 <h4 class="rarity">${obj.rarity.displayValue}</h4>
                 <h5 class="misc">${obj.description}</h5>
-                <button class = "more">Learn More</button>
+                <h5 class="misc">ID = ${obj.id}</h5>
             </div>`
             ) 
         )
@@ -42,7 +42,7 @@ function clearHTML(){
 };
         
 function clearSearchFields(){
-    inputName.value = "";
+    inputID.value = "";
 };
 
 function addCard(arr){
@@ -53,48 +53,10 @@ function addCard(arr){
         <img class="cover" src="${obj.images.icon}" alt="image">
         <h4 class="rarity">${obj.rarity.displayValue}</h4>
         <h5 class="misc">${obj.description}</h5>
-        <button class = "more">Learn More</button>
+        <h5 class="misc">ID = ${obj.id}</h5>
     </div>`
 ))};
 
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault(); 
-    clearHTML();
-    clearSearchFields();
-    if(data.data.filter((el) => el.name === "inputName.value")){
-        const newArr = data.data.filter((el) => el.name === "inputName.value")
-        addCard(newArr);
-    } else{
-        DOMSelectors.container.innerHTML ="Couldn't find that";
-    }
-}); 
-
-// function expansion(){ //expanding card when clicking on it TBD
-//     let cards = document.querySelectorAll(".card")  
-//    cards.forEach((card) => card.addEventListener("click", function(){
-//        clearHTML();
-//        cards.forEach((obj) => DOMSelectors.container.insertAdjacentHTML(
-//         "beforeend",
-//                 `<div class = "card">
-//                 <h3 class="cardtitle">${obj.name}</h3>
-//                 <img class="cover" src="${obj.icon}" alt="image">
-//                 <h4 class="rarity">${obj.displayValue}</h4>
-//                 <h5 class="misc">${obj.description}</h5>
-//             </div>`
-// ))}))}; 
-
-//    expansion()
-/*
-// function filtering(){
-//     let options = document.querySelectorAll("#dropdown-content")  
-//    options.forEach((choice) => choice.addEventListener("click", function(){
-//        clearHTML();
-//        let category = btn.textContent.toLowerCase() 
-//        let newArr = cosmetics.filter((item) => item.type.object.value.includes(category));
-//        insertCard(newArr)
-//    })); 
-//    };
-//    filtering() */
  function filtering(){
    let buttons = document.querySelectorAll(".btns")  
    buttons.forEach((btn) => btn.addEventListener("click", function(event){
@@ -106,24 +68,6 @@ DOMSelectors.form.addEventListener("submit", function(event){
        })); 
    };
    filtering() 
-
-let learnmore = document.querySelectorAll(".more")
-learnmore.forEach((btn) => btn.addEventListener("click", function(event){
-    //event.preventDefault();
-    clearHTML();
-    let popUp = document.querySelector(".expandedCard")
-    popUp.style.display = "flex"
-    console.log(event.target.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent);
-    DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class = "expandedCard">
-        <h3 class="cardtitle">${event.target.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent}</h3>
-        <img class="cover" src="${learnmore.parentElement.icon}" alt="image">
-        <h4 class="rarity">${learnmore.parentElement.displayValue}</h4>
-        <h5 class="misc">${learnmore.parentElement.description}</h5>
-    </div>`
-    ) 
-}))
 
 let all = document.querySelector(".all")
 all.addEventListener("click", function(event){
@@ -137,7 +81,7 @@ all.addEventListener("click", function(event){
             <img class="cover" src="${obj.images.icon}" alt="image">
             <h4 class="rarity">${obj.rarity.displayValue}</h4>
             <h5 class="misc">${obj.description}</h5>
-            <button class = "more">Learn More</button>
+            <h5 class="misc">ID = ${obj.id}</h5>
         </div>`
        ) 
    )
@@ -150,4 +94,3 @@ all.addEventListener("click", function(event){
     }
 }
 getData(URL); 
-//event . target element

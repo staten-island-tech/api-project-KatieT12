@@ -6,8 +6,6 @@ const DOMSelectors = {
     inputTitle: document.getElementById('inputTitle'),
     form: document.querySelector("form"),
     card: document.querySelector("card"),
-    // option: document.querySelector("#option"),
-    // dropdownContent: document.querySelectorAll("#dropdown-content")
     buttons: document.querySelector(".btns"),
     all: document.querySelector(".all"), 
 };

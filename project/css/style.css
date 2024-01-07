@@ -8,16 +8,19 @@ body,
 }
 :root{
   /*darkmode palette*/
-  --dark3: #2f3136;
-  --dark1:#1ccd4f;
-  --dark2:#00c617;
-  --dark4:#40444b;
+  --dark3: #192C30;
+  --dark1:#192C30;
+  --dark2:#76715C;
+  --dark4:#DD713F;
+  --darkbg: url('../css/img/darkbg5.jpg');
+
   /*lightmode palette*/
-  --light1:#e4e5f1;
-  --light2: #fafafa;
-  --light3: #484b6a;
-  --light4: #e4e5f1;
-  --light5: #d3b34f;
+  --light1:#F0F4FFff;
+  --light2: #B4C1D2ff;
+  --light3:#5F7D88;
+  --light4: #F0F4FFff;
+  --light5: #F0F4FFff;
+  --lightbg: url('../css/img/pexels-johannes-plenio-1103970.jpg');
 
   /* Intentions 
   can use primary-textColor: to define main text color of the theme*/
@@ -36,21 +39,26 @@ body,
   --secondary: var(--light2);
   --third:var(--light3);
   --fourth: var(--light5);
+  --bg: var(--lightbg);
 }
 .dark{
-  --primary: var(--dark4);
-  --secondary: var(--dark3);
+  --primary: var(--dark4); 
+  --secondary: var(--dark2);
   --third: var(--dark1);
-  --fourth: var(--dark3)
+  --fourth: var(--dark2);
+  --bg: var(--darkbg);
 }
 .title{
   background-color: var(--third);
   text-align: center;
-  color: var(--fourth);
-  font-family: 'Hammersmith One', sans-serif;
+  color: var(--primary);
+  font-family: 'Bebas Neue', sans-serif;
 }
 .main{
-  background-color: var(--secondary);
+  background: var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 h1{
   font-size: var(--h1);
@@ -70,18 +78,12 @@ h5{
 h1, h2, h3, h4, h5{
   text-align: center;
 }
-.form {
-  font-size: 5vh;
-  color: var(--third);
-  text-align: center;
-  margin-bottom: 5rem;
-}
 #changetheme, .btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;
   align-items: center;
   display: flex;
-  margin: 1rem auto;
+  margin: 5rem auto;
   font-size: 2rem;
   border: none;
   border-radius: 10rem;
@@ -91,7 +93,17 @@ h1, h2, h3, h4, h5{
   color: var(--third);
   transition: 0.6s;
   box-shadow: 0px 0px 10px var(--third);
-
+  font-family: 'Bebas Neue', sans-serif;
+}
+#changetheme{
+  margin-top: 90px;
+  margin-bottom: 90px;
+  height: 10vh;
+  width:20vw;
+  text-align: center;
+}
+nav{
+  margin-left: 16.5rem;
 }
 .btns, .all{
   text-decoration: none;
@@ -109,30 +121,18 @@ h1, h2, h3, h4, h5{
   width: 10vw;
 }
 .all{
-  transform: translate(0,-10%);
+  transform: translate(0,-2%);
 }
 #changetheme:hover, .btns:hover, .all:hover{
   /* transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2); */
   background: var(--primary);
-  background: linear-gradient(270deg, var(--primary, 0.681) 0%, var(--third, 0.873) 60%);
-  color: var(--fourth);
+  background: linear-gradient(270deg, var(--primary, 0.681) 0%, var(--secondary, 0.873) 60%);
+  color: #ffffff;
   transition: 0.6s;
 }
 .btn:active {
   scale: 0.92;
-}
-.more{
-  height: 70px; width: 200px;
-  font-size: var(--h4);
-  border: none;
-  border-radius: 1rem;  
-  background-color:var(--secondary);
-  color: var(--third);
-  font-family: 'Hammersmith One', sans-serif;
-}
-.more:hover{
-  cursor: pointer;
 }
 /*carddetails*/
 .card{
@@ -145,24 +145,15 @@ justify-content: space-around;
 border-radius: 20px;
 margin-bottom: 40px;
 background-color: var(--primary);
+opacity: 50%;
 /* box-shadow: rgba(36, 36, 36, 0.01) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.01) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.01) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
 }
 .card:hover{
   transform: translateY(-2px);
   transition: 0.6s;
+  opacity:100%
 }
-.expandedCard{
-  height: 60vh;
-  width: 60vw;
-  display: none;
-flex-direction: column;
-align-items: center;
-position: absolute;
-justify-content: space-around;
-border-radius: 20px;
-margin-bottom: 40px;
-background-color: var(--primary);
-}
+
 img{
   width: 50%;
   margin-bottom: 0px;
@@ -171,20 +162,20 @@ img{
   margin-top: 1rem;
   font-size: var(--h4);
   color: var(--third);
-  font-family: 'Hammersmith One', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .misc{
   font-size: var(--h4);
   color: var(--third);
   margin: 5px;
-  font-family: 'Pridi', serif;
-  font-size: 1.5rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: var(--h4);
 }
 .rarity{
   font-size: var(--h4);
   color: var(--third);
   margin-bottom: -20px;
-  font-family: 'Pridi', serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .container{
   display: flex;
@@ -195,85 +186,9 @@ img{
   margin-top: 15rem;
   padding: 5px;
   flex-direction: row;
+  background-size: cover;
   }
-  /*drop down menu attempts*/
-  /* select {
-    font-size: 0.9rem;
-    padding: 2px 5px;
-  }
-  .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
-  /* navigation bar*/
-  /* oldnavbar
-  ul{
-    position: absolute;
-    top: 55%;
-    left: 45.6%;
-    transform: translate(-50%,-180%);
-    margin: 0;
-    padding: 20px 0;
-    background: var(--primary);
-    display: flex;
-    border-radius: 10px;
-    margin: 5rem;
-  }
-ul li{
-  list-style: none;
-  text-align: center;
-  display: block;
-  border-right: 0.5px double var(--third);
-  border-left: 0.5px double var(--third);
-  font-size: 2.5rem;
-  font-family: 'Paytone One', sans-serif;
-}
-ul li a{
-  text-decoration: none;
-  padding: 0 40px;
-  display: block;
-  color: var(--third);
-}
-
-li{
-  margin-bottom: -1rem;
-  border: var(--third);
-}
-
-#name{
-  margin-top: 10rem;
-} */
 .fa-solid{
 line-height: 3;
 }
@@ -306,7 +221,18 @@ line-height: 3;
 .icon{
   color: var(--third);
 }
-.nav{
-  display: flex;
-  align-items: center;
+.changeicon{
+  width: 15%;
+  margin-left: 150px;
 }
+@media screen and (max-width:1000px){
+  .card{
+    width:40%;
+  }
+}
+@media screen and (max-width:813px){
+    .card{
+      width:100%;
+    }
+    
+  }
