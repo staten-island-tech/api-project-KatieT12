@@ -20,7 +20,7 @@ async function getData(URL){
                 "beforeend",
                 `<div class = "card">
                 <h3 class="cardtitle">${obj.name}</h3>
-                <img class="cover" src="${obj.images.icon}" alt="image">
+                <img class="cover" src="${obj.images.icon}" alt="This is an image of '${obj.name}">
                 <h4 class="rarity">${obj.rarity.displayValue}</h4>
                 <h5 class="misc">${obj.description}</h5>
                 <h5 class="id">ID = ${obj.id}</h5>
