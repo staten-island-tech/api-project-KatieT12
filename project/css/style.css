@@ -78,6 +78,18 @@ h5{
 h1, h2, h3, h4, h5{
   text-align: center;
 }
+.form{
+  height: 10vh;
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  font-size: var(--h3);
+  margin-left: 75rem;
+  margin-top: 5rem;
+}
+label{
+  font-family: 'Bebas Neue', sans-serif;
+}
 #changetheme, .btns, .all{
   text-decoration: none;
   padding: 1.5rem 4rem;

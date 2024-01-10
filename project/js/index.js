@@ -44,6 +44,40 @@ function clearHTML(){
 function clearSearchFields(){
     inputID.value = "";
 };
+//form
+DOMSelectors.form.addEventListener("submit", function(event){
+    event.preventDefault();
+    clearHTML();
+    const specificURL = `https://fortnite-api.com/v2/cosmetics/br/${inputID.value}`;
+
+    async function getData(specificURL){
+        try{
+            const response = await fetch(specificURL);
+            if(response.status !=200){
+                throw new Error(response.statusText);
+    }
+    const data = await response.json();
+    console.log(data); 
+    data.data.forEach(obj => 
+        DOMSelectors.container.insertAdjacentHTML(
+           "beforeend",
+           `<div class = "card">
+           <h3 class="cardtitle">${obj.name}</h3>
+           <img class="cover" src="${obj.images.icon}" alt="This is an image of '${obj.name}">
+           <h4 class="rarity">${obj.rarity.displayValue}</h4>
+           <h5 class="misc">${obj.description}</h5>
+           <h5 class="id">ID = ${obj.id}</h5>
+       </div>`
+       ) 
+    )
+    } catch (error) {
+    console.log(error, "Uh oh"); 
+    document.querySelector("title").textContent = "woops";
+    }
+} 
+    getData(specificURL);  
+    clearSearchFields();
+}); 
 
 function addCard(arr){
     arr.forEach((obj)=> DOMSelectors.container.insertAdjacentHTML(
