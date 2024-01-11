@@ -58,18 +58,18 @@ DOMSelectors.form.addEventListener("submit", function(event){
     }
     const data = await response.json();
     console.log(data); 
-    data.data.forEach(obj => 
         DOMSelectors.container.insertAdjacentHTML(
            "beforeend",
-           `<div class = "card">
-           <h3 class="cardtitle">${obj.name}</h3>
-           <img class="cover" src="${obj.images.icon}" alt="This is an image of '${obj.name}">
-           <h4 class="rarity">${obj.rarity.displayValue}</h4>
-           <h5 class="misc">${obj.description}</h5>
-           <h5 class="id">ID = ${obj.id}</h5>
+           `<div class = "expandedCard">
+           <h3 class="expandedcardtitle">${data.data.name}</h3>
+           <h3 class="set">${data.data.set.text}</h3>
+           <img class="expandedcover" src="${data.data.images.icon}" alt="This is an image of '${data.data.name}">
+           <h5 class="introduction">${data.data.introduction.text}</h5>
+           <h5 class="expandedmisc">${data.data.description}</h5>
+           <h4 class="expandedrarity">${data.data.rarity.displayValue}</h4>
+           <h5 class="expandedid">ID = ${data.data.id}</h5>
        </div>`
        ) 
-    )
     } catch (error) {
     console.log(error, "Uh oh"); 
     document.querySelector("title").textContent = "woops";
